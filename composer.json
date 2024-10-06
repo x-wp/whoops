@@ -1,0 +1,58 @@
+{
+  "name": "x-wp/whoops",
+  "description": "Whoops error handler for WordPress",
+  "license": "GPL-2.0-only",
+  "type": "library",
+  "keywords": [
+    "wordpress",
+    "dev",
+    "whoops",
+    "error-handler",
+    "extended-wp"
+  ],
+  "authors": [
+    {
+      "name": "Sibin Grasic",
+      "email": "sibin.grasic@oblak.studio"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/x-wp/whoops/issues"
+  },
+  "require": {
+    "php": "^7.1 || ^8.0",
+    "automattic/jetpack-constants": "^2.0",
+    "filp/whoops": "^2.16",
+    "x-wp/helper-functions": "^1.13"
+  },
+  "require-dev": {
+    "oblak/wordpress-coding-standard": "^1.1",
+    "php-stubs/wordpress-stubs": "^6.6",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^1.12",
+    "phpstan/phpstan-deprecation-rules": "^1.2",
+    "swissspidy/phpstan-no-private": "^0.2",
+    "szepeviktor/phpstan-wordpress": "^1.3"
+  },
+  "provide": {
+    "x-wp/di-implementation": "self.version"
+  },
+  "suggest": {
+    "automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package.",
+    "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+    "whoops/soap": "Formats errors as SOAP responses"
+  },
+  "autoload": {
+    "psr-4": {
+      "XWP\\Error\\": "src/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "automattic/jetpack-autoloader": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true
+  }
+}
