@@ -44,8 +44,14 @@
   },
   "autoload": {
     "psr-4": {
-      "XWP\\Error\\": "src/"
-    }
+      "XWP\\Whoops\\": "src/"
+    },
+    "classmap": [
+      "src/Core/"
+    ],
+    "files": [
+      "src/Functions/xwp-whoops-init.php"
+    ]
   },
   "config": {
     "allow-plugins": {
