@@ -29,7 +29,7 @@ if ( ! function_exists( 'xwp_whoops_init' ) && function_exists( 'add_action' ) )
         $whoops ??= ( new XWP_Whoops() )->register();
     }
 
-    ! did_action( 'plugins_loaded' )
+    ! did_action( 'plugins_loaded' ) && ! doing_action( 'plugins_loaded' )
         ? add_action( 'plugins_loaded', 'xwp_whoops_init', PHP_INT_MIN )
         : xwp_whoops_init();
 
