@@ -20,7 +20,7 @@
     "issues": "https://github.com/x-wp/whoops/issues"
   },
   "require": {
-    "php": "^7.1 || ^8.0",
+    "php": ">=8.0",
     "automattic/jetpack-constants": "^2.0",
     "filp/whoops": "^2.16",
     "x-wp/helper-functions": "^1.13"
